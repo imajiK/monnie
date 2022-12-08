@@ -29,8 +29,7 @@ for (const file of commandFiles) {
 	if ('data' in command && 'execute' in command) {
 		bot.commands.set(command.data.name, command);
 	} else {
-		console.log(`[W] The command at ${filePath} is missing a required "data" or "execute" property.`);
+		console.log(`[W] El comando localizado en ${filePath} requiere de la propiedad "data" o "execute".`);
 	}
 }
 
-bot.login(process.env.TOKEN);
